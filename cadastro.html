@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cadastro.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <h1>Cadastro Notícia</h1>
+
+    <form>
+      <div>
+        <label for="titulo">Título: </label>
+        <input type="text" id="titulo" autofocus />
+      </div>
+
+      <div>
+        <label for="corTitulo">Cor do Titulo: </label>
+        <input type="color" id="corTitulo" />
+      </div>
+
+      <div>
+        <label for="data">Data: </label>
+        <input type="date" id="data" />
+      </div>
+
+      <div>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" />
+      </div>
+
+      <div>
+        <label>Imagem: </label>
+        <input type="file" accept="image/*" for="fileImagem" />
+      </div>
+
+      <div>
+        <label for="introducao">Introdução: </label>
+        <textarea rows="5" id="introducao"></textarea>
+      </div>
+
+      <div>
+        <label for="enderecoOrigem">Endereço de origem: </label>
+        <input type="url" id="enderecoOrigem" />
+      </div>
+
+      <input type="submit" value="Enviar" class="botaoEnviar" />
+    </form>
+
+    <footer>
+      KÉVIN SANTOS - PÓS-GRADUAÇÃO EM DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE
+    </footer>
+  </body>
+</html>
