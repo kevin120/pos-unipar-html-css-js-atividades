@@ -4,90 +4,161 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" />
     <title>HTML5, CSS3 E JAVASCRIPT</title>
   </head>
   <body>
-    <header>
+    <header class="jumbotron jumbotron-fluid">
       <h1>HTML5, CSS3, JS</h1>
     </header>
 
-    <nav>
-      <a href="#">Noticias</a>
-      <a href="cadastro.html">Cadastro</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-link active" href="#">Noticias</a>
+              <a class="nav-link" href="cadastro.html">Cadastro</a>
+          </div>
+      </div>
     </nav>
 
     <main>
-      <article>
+      <div class="container-fluid">
 
-        <h1>HTML5</h1>
+        <div id="dropzone" class="row" style="padding: 10px;" 
+              ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="leave(event)">
 
-        <div>
-          <p>Data: 27/03/2021</p>
-          <p>Email: kevin.b.santos@gmail.com</p>
         </div>
+        
+        <div id="dropzone2" class="row" style="padding: 10px;" 
+              ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="leave(event)">
 
-        <div>
-          <img src="img/html5.png" width="200" height="200" />
+          <div id="news1" class="col-lg-4" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+            <article>  
+              <h4>HTML5</h4>
+
+              <div>
+                <small>Data: 27/03/2021</small>
+                <small class="float-right">Email: kevin.b.santos@gmail.com</small>
+              </div>
+
+              <div style="display: flex;width: 100%;justify-content: center;">
+                <img src="img/html5.png" class="img-fluid" />
+              </div>
+
+              <p>
+                HTML (abreviação para a expressão inglesa HyperText Markup Language,
+                que significa: "Linguagem de Marcação de Hipertexto" é uma linguagem
+                de marcação utilizada na construção de páginas na Web.
+              </p>
+
+              <a class="btn btn-info btn-sm float-right" target="_blank" href="https://pt.wikipedia.org/wiki/HTML">Leia mais</a>
+            </article>
+          </div>
+
+          
+          
+          <div id="news2" class="col-lg-4" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+            <article>
+
+              <h4>CSS3</h4>
+
+              <div>
+                <small>Data: 27/03/2021</small>
+                <small class="float-right">Email: kevin.b.santos@gmail.com</small>
+              </div>
+
+              <div style="display: flex;width: 100%;justify-content: center;">
+                <img src="img/css.png" class="img-fluid" />
+              </div>
+
+              <p>
+                Cascading Style Sheets (CSS) é um mecanismo para adicionar estilo (cores, fontes, espaçamento, etc.) a um documento web.  
+              </p>
+              <a class="btn btn-info btn-sm float-right" target="_blank" href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets">Leia mais</a>
+            </article>
+          </div>
+
+          <div id="news3" class="col-lg-4" draggable="true" ondragstart="drag(event)" ondragover="denyDrop(event)">
+            <article>
+
+              <h4>Javascript</h4>
+
+              <div>
+                <small>Data: 27/03/2021</small>
+                <small class="float-right">Email: kevin.b.santos@gmail.com</small>
+              </div>
+
+              <div style="display: flex;width: 100%;justify-content: center;">
+                <img src="img/javascript.png" class="img-fluid"/>
+              </div>
+
+              <p>
+                JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem 
+                dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional).
+              </p>
+
+              <a class="btn btn-info btn-sm float-right" target="_blank" href="https://pt.wikipedia.org/wiki/JavaScript">Leia mais</a> 
+            </article>
+          </div>
         </div>
-
-        <p>
-          HTML (abreviação para a expressão inglesa HyperText Markup Language,
-          que significa: "Linguagem de Marcação de Hipertexto" é uma linguagem
-          de marcação utilizada na construção de páginas na Web. Documentos HTML
-          podem ser interpretados por navegadores. A tecnologia é fruto da
-          junção entre os padrões HyTime e SGML.
-        </p>
-
-        <a href="https://pt.wikipedia.org/wiki/HTML">Artigo HTML</a>
-      </article>
-
-      <article>
-
-        <h1>CSS3</h1>
-
-        <div>
-          <p>Data: 27/03/2021</p>
-          <p>Email: kevin.b.santos@gmail.com</p>
-        </div>
-
-        <div>
-          <img src="img/css.png" width="200" height="200" />
-        </div>
-
-        <p>
-          Cascading Style Sheets (CSS) é um mecanismo para adicionar estilo (cores, fontes, espaçamento, etc.) a um documento web.  
-          O código CSS pode ser aplicado diretamente nas tags ou ficar contido dentro das tags style. 
-          Também é possível, em vez de colocar a formatação dentro do documento, 
-          criar um link para um arquivo CSS que contém os estilos. Assim, quando se quiser alterar a aparência dos documentos vinculados a este arquivo CSS, basta modifica-lo.
-        </p>
-        <a href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets">Artigo CSS</a>
-      </article>
-
-      <article>
-
-        <h1>Javascript</h1>
-
-        <div>
-          <p>Data: 27/03/2021</p>
-          <p>Email: kevin.b.santos@gmail.com</p>
-        </div>
-
-        <div>
-          <img src="img/javascript.png" width="200" height="200" />
-        </div>
-
-        <p>
-          JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem 
-          dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional).
-          Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. 
-          JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. 
-          A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
-        </p>
-
-        <a href="https://pt.wikipedia.org/wiki/JavaScript">Artigo Javascript</a> 
-      </article>
+      </div>
     </main>
 
-    <footer>KÉVIN SANTOS - PÓS-GRADUAÇÃO EM DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE</footer>
+    <footer class="jumbotron jumbotron-fluid fixed-bottom">
+      <div class="container">
+          <div>
+            <strong>KÉVIN SANTOS</strong> - PÓS-GRADUAÇÃO EM DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE
+          </div>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous">
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+      function allowDrop(ev) {
+          ev.preventDefault();
+          ev.currentTarget.style.border = "3px dotted #ccc";
+          ev.currentTarget.style.background = "#eee";
+      }
+
+      function denyDrop(ev) {
+          ev.stopPropagation();
+      }
+      
+      function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function leave(ev){
+          ev.preventDefault();
+          ev.target.style.border = "none";
+          ev.target.style.background = "inherit";
+      }
+      
+      function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+          ev.target.style.border = "none";
+          ev.target.style.background = "inherit";
+      }
+    </script>
   </body>
 </html>

@@ -12,12 +12,12 @@ textarea {
   vertical-align: top;
 }
 
-footer {
+/*footer {
   position: fixed;
   left: 20px;
   bottom: 10px;
   width: 100%;
-}
+}*/
 
 input[type="submit"] {
     margin-left: 150px;
